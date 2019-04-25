@@ -1,0 +1,302 @@
+% The following is necessary to satisfy BU grad school guidleines.
+\documentclass{BaylorThesis_phd} % Doctoral 5 signature version
+%\documentclass{BaylorThesis_ma} % Masters 3 signature version
+%other options available:
+% fleqn%
+% leqno%
+% openbib
+% draft
+% final
+% openright
+% openany
+
+
+% ==================
+% = Misc. Packages =
+% ==================
+% Put your specific packages here.
+\usepackage{lscape}
+
+% you do NOT need this package. It generates filler text
+\usepackage{lipsum}
+
+%Math typesetting packages
+\usepackage{amsfonts, amssymb, amsmath, latexsym, amsthm}
+
+%for URLs in-text 
+\usepackage{url}
+
+
+%% Subfigures and subcaptions
+\usepackage{subcaption}
+
+% ==============
+% = Formatting =
+% ==============
+
+\voffset=-.6875in
+\setlength{\textheight}{9.65in}
+
+% allows accented output characters
+\usepackage[T1]{fontenc}
+% allows user to input accented characters directly from the keyboard
+\usepackage[utf8]{inputenc}
+
+
+% A serif font is required (e.g. Times New Roman). The defulat font is Computer Modern Roman. 
+% Other fonts can be found at http://www.tug.dk/FontCatalogue/seriffonts.html
+
+% minimize widows and orphans
+\usepackage[all]{nowidow}
+
+% justification--ragged right
+\usepackage{ragged2e}
+\setlength{\RaggedRightParindent}{6mm}
+
+% single spacing after periods
+\frenchspacing
+
+% ================
+% = Bibliography =
+% ================
+%APA style citations and references
+\usepackage[natbibapa]{apacite} 
+% for hanging-indentation style using apacite
+\setlength{\bibindent}{2.5em}
+\setlength{\bibleftmargin}{0em}
+
+% ==========
+% = Floats =
+% ==========
+\usepackage{float}
+
+% include external pictures
+\usepackage{graphicx} %Graphics/figures
+
+% rotate figures/tables
+\usepackage{rotating} 
+
+% For professional tables
+\usepackage{booktabs,threeparttable,threeparttablex} 
+
+% To draw path models
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,positioning,shapes,patterns}
+
+% multipage tables
+\usepackage{longtable} 
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+% To have tables that allows Returns
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+
+% ==========
+% = Floats =
+% ==========
+\usepackage{float}
+
+% include external pictures
+\usepackage{graphicx} %Graphics/figures
+
+% rotate figures/tables
+\usepackage{rotating} 
+
+% For professional tables
+\usepackage{booktabs,threeparttable} 
+
+% To draw path models
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,positioning,shapes,patterns}
+
+% multipage tables
+\usepackage{longtable} 
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+
+
+% To have tables that allows Returns
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+
+% ==========
+% = Syntax =
+% ==========
+% For Computer Code in Appendix. I set the language for R, so will need to be changed for different languages
+\usepackage{listings}
+\lstset{
+    language=R,
+    basicstyle=\small \ttfamily,
+    commentstyle=\ttfamily ,
+    showspaces=false,
+    showstringspaces=false,
+   showtabs=false,
+    frame=none,
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    title=\lstname,
+    aboveskip=10pt,
+    belowskip=-10pt,
+    %escapeinside={},
+    %keywordstyle={},
+   % morekeywords={}
+    }
+% =====================
+% = Section Numbering =
+% =====================
+
+
+%One of these two should be uncommented
+% \sectionnumbering{\secnumtrue} %section numbering
+\sectionnumbering{\secnumfalse} %no section numbering
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Front matter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Stuff It Took Me Took Much Time to Write}
+\author{I. M. Happy}
+\degrees{B.A., M.A., LMnoP} % degrees held before this Ph.D.
+
+\mentor{A. Smith, Ph.D.}
+\reader{B. Smith, Ph.D.}% your committee members and degree in alphabetical order
+\readerThree{C. Smith, Ph.D.}
+\readerFour{D. Smith, Ph.D.} 
+\readerFive{E. Smith, Ph.D.}
+
+\confDate{May 2019} % month and year of actual graduation
+
+\makeCopyrightPage
+
+\graduateDean{J. Larry Lyon, Ph.D.}
+\deptChair{Com Fy Chair, Ph.D.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABSTRACT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%The abstract briefly summarizes the contents of the document. For dissertations, the abstract is limited to 350 words; for theses, 150 words.
+
+\abstract{
+\lipsum[1] 
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LIST OF ABBREVIATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The entries are single-spaced where the text is more than one line, with a double space between entries.
+
+\abbreviation{
+
+% make rows that continue definition single spaced
+\singlespacing
+% make rows between definitions double spaced
+\setlength{\extrarowheight}{1\baselineskip}
+\begin{tabular}{L{.2\textwidth}L{.75\textwidth}}
+    & (This page is optional)\\
+EdS & 	Education Specialist\\
+MA & 	Master of Arts\\
+PhD & 	Doctor of Philosophy\\
+AMADR & I made this one up merely to show that this line is single spaced\\
+\end{tabular}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREFACE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%A preface is a statement of the author's reasons for undertaking the work and other personal comments that are not directly germane to the materials presented in other sections of the thesis or dissertation. These reasons tend to be of a personal nature.
+
+\preface{Preface materials \ldots (this is optional)}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACKNOWLEDGEMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Acknowledgements are the author's statement of gratitude to and recognition of the people and institutions that helped the author's research and writing. Use complete sentences throughout the acknowledgments.
+
+\acknowledgements{Thank you notes \ldots (this is optional)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEDICATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%A dedication is a message from the author prefixed to a work in tribute to a person, group, or cause. Most dedications are short statements of tribute beginning with “To…” such as “To my family”. Generally, there is no ending punctuation. 
+
+%\dedication{To my help (this is optional)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT BODY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagenumbering{arabic}
+
+% Spacing for Eqations Can't be in preamble...
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+
+%%%%% INTRODUCTION %%%%%%%
+\input{Ch1.tex}
+% 
+% %%%%%% Chapter 2 %%%%%%%%
+\input{Ch2.tex}
+% 
+% %%%%%% Chapter 3 %%%%%%%%
+\input{Ch3.tex}
+% 
+% %%%%%% Chapter 4 %%%%%%%%
+\input{Ch4.tex}
+% 
+% %%%%%%% Chapter 5 %%%%%%%%
+\input{Ch5.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\vspace*{4.25in}
+ \begin{center}
+      APPENDICES
+ \end{center}
+ \pagestyle{plain}
+  \pagebreak
+
+\newpage
+\appendix
+\renewcommand\thesection{\Alph{chapter}.\arabic{section}}
+\input{Appendix.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REFERENCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\raggedright
+\bibliographystyle{apacite} % You may have to select another style. Remember: LaTeX, BibTeX, LaTeX, LaTex to get the citations to appear
+%%\raggedright
+\urlstyle{same}
+\interlinepenalty=10000
+\bibliography{references}
+
+\end{document}
