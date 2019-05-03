@@ -17,3 +17,4 @@ The list of files is larger than if you used Word, but the formatting is easy on
 ## To do list
 
 1. Make department function for the main file so that we don't have to edit the .cls file for each department.
+2. Merge the two .cls files so we don't need one for masters and one for phd (it's currently only a few lines differences anyways...)
